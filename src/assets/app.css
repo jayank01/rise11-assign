@@ -2,8 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
 
 /* core css */
+body::-webkit-scrollbar{
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: grey;
+    border-radius: 50px;
+}
+
+
 body{
     font-family: 'Quicksand', sans-serif;
+}
+#xx{
+   background-image: linear-gradient(to right, #9c45ee 0%, #c094de 100%);
+  color: white;
+}
+#button{
+  background-image: linear-gradient(to right, #f08fec 0%, #d2aeea 100%);
 }
 
 .border-1-custom{
@@ -11,7 +27,7 @@ body{
 }
 
 .bg-gradient{
-    background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+    background-image: linear-gradient(to right, #f08fec 0%, #d2aeea 100%);
 }
 
 input[type=radio]::after {

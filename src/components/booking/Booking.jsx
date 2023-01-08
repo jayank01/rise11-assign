@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import BookingForm from "./BookingForm";
-
+import vid from "../../assets/images/pink.mp4";
+import "../../assets/app.css";
 const Booking = () => {
 
     // state
@@ -38,6 +39,7 @@ const Booking = () => {
 
     return (
         <div className='pt-40 pb-20'>
+      
             <form className='max-w-5xl px-6 pt-8 pb-10 w-full mx-auto bg-white rounded-lg drop-shadow'>
                 <div className='flex items-center justify-between flex-wrap mb-10'>
                     <div className="flex-item">
@@ -55,16 +57,16 @@ const Booking = () => {
                     <div className="flex-item">
                         <h2 className='text-lg font-bold mb-3'>Vehicle Type:</h2>
                         <span className='relative overflow-hidden inline-block mb-2 lg:mb-0 mr-3 border-1-custom py-2 px-4 rounded-full transition-all duration-300 hover:bg-gray-300 font-bold'>
-                            <input type="radio" name='vehicle-type' className='hover:bg-indigo-600' onClick={ () => handleVehicle({type: 'bus'}) } /> Bus
+                            <input type="radio" name='vehicle-type' className='hover:bg-indigo-600' onClick={ () => handleVehicle({type: 'bus'}) } /> Flight
                         </span>
                         <span className='relative overflow-hidden inline-block mb-2 lg:mb-0 mr-3 border-1-custom py-2 px-4 rounded-full transition-all duration-300 hover:bg-gray-300 font-bold'>
-                            <input type="radio" name='vehicle-type' className='hover:bg-indigo-600' onClick={ () => handleVehicle({type: 'truck'}) } /> Truck
+                            <input type="radio" name='vehicle-type' className='hover:bg-indigo-600' onClick={ () => handleVehicle({type: 'truck'}) } /> Train
                         </span>
                         <span className='relative overflow-hidden inline-block mb-2 lg:mb-0 mr-3 border-1-custom py-2 px-4 rounded-full transition-all duration-300 hover:bg-gray-300 font-bold'>
-                            <input type="radio" name='vehicle-type' className='hover:bg-indigo-600' onClick={ () => handleVehicle({type: 'bike'}) } /> Bike
+                            <input type="radio" name='vehicle-type' className='hover:bg-indigo-600' onClick={ () => handleVehicle({type: 'bike'}) } /> Bus
                         </span>
                         <span className='relative overflow-hidden inline-block mb-2 lg:mb-0 mr-3 border-1-custom py-2 px-4 rounded-full transition-all duration-300 hover:bg-gray-300 font-bold'>
-                            <input type="radio" name='vehicle-type' className='hover:bg-indigo-600' onClick={ () => handleVehicle({type: 'car'}) } /> Car
+                            <input type="radio" name='vehicle-type' className='hover:bg-indigo-600' onClick={ () => handleVehicle({type: 'car'}) } /> Cab
                         </span>
                     </div>
                 </div>
@@ -78,20 +80,20 @@ const Booking = () => {
                 <div className="flex items-center justify-between flex-wrap mb-10">
                     <div className="flex-item">
                         <h2 className='text-lg font-bold mb-3'>Fare type:</h2>
-                        <span className='inline-block mb-2 lg:mb-0 p-2 bg-gray-200 rounded mr-1 transition-all duration-300 hover:bg-gray-300'>Regular</span>
-                        <span className='inline-block mb-2 lg:mb-0 p-2 bg-gray-200 rounded mr-1 transition-all duration-300 hover:bg-gray-300'>Armed Forces</span>
-                        <span className='inline-block mb-2 lg:mb-0 p-2 bg-gray-200 rounded mr-1 transition-all duration-300 hover:bg-gray-300'>Senior Citizen</span>
-                        <span className='inline-block mb-2 lg:mb-0 p-2 bg-gray-200 rounded mr-1 transition-all duration-300 hover:bg-gray-300'>Student</span>
+                        <Link to="" className='inline-block mb-2 lg:mb-0 p-2 bg-gray-200 rounded mr-1 transition-all duration-300 hover:bg-gray-300'>Regular</Link>
+                        <Link to="" className='inline-block mb-2 lg:mb-0 p-2 bg-gray-200 rounded mr-1 transition-all duration-300 hover:bg-gray-300'>Armed Forces</Link>
+                        <Link to="" className='inline-block mb-2 lg:mb-0 p-2 bg-gray-200 rounded mr-1 transition-all duration-300 hover:bg-gray-300'>Senior Citizen</Link>
+                        <Link to="" className='inline-block mb-2 lg:mb-0 p-2 bg-gray-200 rounded mr-1 transition-all duration-300 hover:bg-gray-300'>Student</Link>
                     </div>
                     <div className="flex-item mt-2 lg:mt-0">
                         <h2 className='text-lg font-bold mb-3'>Popular search:</h2>
-                        <span className='inline-block mb-2 lg:mb-0 p-2 bg-gray-200 rounded ml-1 transition-all duration-300 hover:bg-gray-300'>Dhaka to Madaripur</span>
-                        <span className='inline-block mb-2 lg:mb-0 p-2 bg-gray-200 rounded ml-1 transition-all duration-300 hover:bg-gray-300'>Dhaka to Savar</span>
+                        <Link to="" className='inline-block mb-2 lg:mb-0 p-2 bg-gray-200 rounded ml-1 transition-all duration-300 hover:bg-gray-300'>California-Mumbai</Link>
+                        <Link to="" className='inline-block mb-2 lg:mb-0 p-2 bg-gray-200 rounded ml-1 transition-all duration-300 hover:bg-gray-300'>Boston-Delhi</Link>
                     </div>
                 </div>
 
                 <div className="w-full text-center pt-10">
-                    <Link to='/thanks' className='py-4 px-12 rounded-md bg-indigo-600 text-white font-bold'>Send Request</Link>
+                    <Link to='/thanks' className='py-4 px-12 rounded-md bg-indigo-600 text-white font-bold' id="button">Send Request</Link>
                 </div>
             </form>
         </div>

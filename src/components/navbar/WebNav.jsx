@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import VA from "../../assets/images/VA.png";
 import Flight from "../../assets/images/flight.png";
 import Train from "../../assets/images/train.png";
 import Bus from "../../assets/images/bus.png";
 import Cab from "../../assets/images/car.png";
 import { useState } from "react";
+import vid from "../../assets/images/pink.mp4";
+import "../../assets/app.css";
 
 const WebNav = () => {
 
@@ -19,14 +22,30 @@ const WebNav = () => {
     }
 
     return (
-        <div className='webnav_area w-full py-4'>
+      
+        <div className='webnav_area w-full py-4 rounded-lg h-25 border-solid border-4 border-black-500' id="xx">
+           
             <div className="max-w-6xl w-full px-4 lg:px-0 mx-auto">
                 <div className="flex items-center justify-between flex-wrap font-bold">
                     <div className="flex-item">
                         <Link to="/">
-                            <h2 className='text-3xl font-extrabold inline'>TravelBD</h2>
+                            
+                          <img src={ VA } className="w-28 inline mr-1" alt="bus" />
+                          
                         </Link>
                     </div>
+                  <div className="flex-item hidden lg:block">
+                    <Link to="" className="border-1-custom py-2 px-4 rounded-md transition-all duration-300 hover:bg-gray-300">BOOK</Link>
+                      
+                  </div>
+                  <div className="flex-item hidden lg:block">
+                    <Link to="" className="border-1-custom py-2 px-4 rounded-md transition-all duration-300 hover:bg-gray-300">CHECK IN</Link>
+                      
+                  </div>
+                  <div className="flex-item hidden lg:block">
+                    <Link to="" className="border-1-custom py-2 px-4 rounded-md transition-all duration-300 hover:bg-gray-300">MANAGE</Link>
+                      
+                  </div>
                     <div className="flex-item hidden lg:block">
                         <Link to="/flights" className='mr-3 border-1-custom py-2 px-4 rounded-full transition-all duration-300 hover:bg-gray-300'>
                             <img src={ Flight } className="w-5 inline mr-1" alt="bus" />
@@ -38,7 +57,7 @@ const WebNav = () => {
                         </Link>
                         <Link to="/busses" className='mr-3 border-1-custom py-2 px-4 rounded-full transition-all duration-300 hover:bg-gray-300'>
                             <img src={ Bus } className="w-5 inline mr-1" alt="bus" />
-                            <span>Buses</span>
+                            <span>Busses</span>
                         </Link>
                         <Link to="/cabs" className='mr-3 border-1-custom py-2 px-4 rounded-full transition-all duration-300 hover:bg-gray-300'>
                             <img src={ Cab } className="w-5 inline mr-1" alt="bus" />
@@ -46,7 +65,7 @@ const WebNav = () => {
                         </Link>
                     </div>
                     <div className="flex-item hidden lg:block">
-                        <Link to="/sign-in" className="border-1-custom py-2 px-4 rounded-md transition-all duration-300 hover:bg-gray-300">Login or Sign-up</Link>
+                        <Link to="/sign-in" className='mr-3 border-1-custom py-2 px-4 rounded-full transition-all duration-300 hover:bg-gray-300'>Login/Sign-up</Link>
                     </div>
 
                     <div className="flex-item lg:hidden">
@@ -60,6 +79,9 @@ const WebNav = () => {
                         <div className="h-screen w-2/3 bg-white absolute top-0 left-0 z-50 drop-shadow px-2 transition-all duration-300">
                             <div className="text-right pt-10" onClick={() => handleMenu()}>Close Menu</div>
                             <ul className="pt-20">
+                              <li className="bg-gray-200 px-3 text-lg rounded-md py-3 mb-1 text-indigo-600"><Link to="/flighs">Bookings</Link></li>
+                              <li className="bg-gray-200 px-3 text-lg rounded-md py-3 mb-1 text-indigo-600"><Link to="/flighs">Check INs</Link></li>
+                              <li className="bg-gray-200 px-3 text-lg rounded-md py-3 mb-1 text-indigo-600"><Link to="/flighs">Manage</Link></li>
                                 <li className="bg-gray-200 px-3 text-lg rounded-md py-3 mb-1 text-indigo-600"><Link to="/flighs">Travel with Flight</Link></li>
                                 <li className="bg-gray-200 px-3 text-lg rounded-md py-3 mb-1 text-indigo-600"><Link to="/trains">Travel with Train</Link></li>
                                 <li className="bg-gray-200 px-3 text-lg rounded-md py-3 mb-1 text-indigo-600"><Link to="/">Travel with Bus</Link></li>
